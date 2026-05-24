@@ -1,0 +1,80 @@
+{
+  "name": "@arieldrio/chat",
+  "version": "0.0.52",
+  "type": "module",
+  "description": "Twilio Conversations-powered React chat component.",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArielDelRio/chat.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ArielDelRio/chat/issues"
+  },
+  "homepage": "https://github.com/ArielDelRio/chat#readme",
+  "main": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/chat/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.umd.js",
+      "types": "./dist/chat/index.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "npm run build && vite preview",
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "build:package": "vite build --config vite.config.package.ts",
+    "prepublishOnly": "npm run build:package",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "release:patch": "npm version patch",
+    "release:minor": "npm version minor",
+    "release:major": "npm version major"
+  },
+  "dependencies": {
+    "@fontsource/roboto": "^5.0.12",
+    "@twilio/conversations": "^2.5.0",
+    "emoji-picker-react": "^4.9.4",
+    "emoji-regex": "^10.3.0",
+    "libphonenumber-js": "^1.10.60",
+    "react-intersection-observer": "^9.10.2"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@mui/icons-material": "^5.15.14 || ^6.2.0",
+    "@mui/material": "^5.15.15 || ^6.2.0",
+    "@mui/system": "^5.15.15 || ^6.2.0",
+    "react": "^17.0.2 || ^18.0.0",
+    "react-dom": "^17.0.2 || ^18.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11",
+    "@types/react": "^17.0.76",
+    "@types/react-dom": "^17.0.25",
+    "@typescript-eslint/eslint-plugin": "^7.0.2",
+    "@typescript-eslint/parser": "^7.0.2",
+    "@vitejs/plugin-react": "^4.2.1",
+    "eslint": "^8.56.0",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.5",
+    "gh-pages": "^6.1.1",
+    "terser": "^5.31.0",
+    "typescript": "^5.2.2",
+    "vite": "^5.1.4",
+    "vite-plugin-dts": "^3.8.1"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=8.11.0"
+  },
+  "volta": {
+    "node": "20.19.0"
+  }
+}

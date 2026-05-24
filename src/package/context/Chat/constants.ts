@@ -1,0 +1,52 @@
+import { MessagePagination } from "./../../types/Pagination";
+import { Contact } from "@/package/types";
+import { InitialState, ChatDispatch } from "./types";
+
+export const INITIAL_STATE: InitialState = {
+  contact: new Contact({ identity: "" }),
+  view: "active",
+  conversations: [],
+  search: {
+    active: false,
+    query: "",
+    results: {
+      items: [],
+      hasMore: false,
+    },
+  },
+  selectionMode: {
+    active: false,
+    selectedMessages: [],
+  },
+};
+
+export const CHAT_DISPATCH: ChatDispatch = {
+  initializeChat: () => {},
+  setAlert: () => {},
+  clearAlert: () => {},
+  setView: () => {},
+  shutdownChat: () => {},
+  selectContact: () => {},
+  clearSelectedContact: () => {},
+  startConversation: () => Promise.resolve(),
+  selectMessage: () => {},
+  fetchMoreMessages: () => Promise.resolve(undefined),
+  setAutoScroll: () => {},
+  getContext: () => INITIAL_STATE,
+  clearMessageToInitialScrollTo: () => {},
+  goToMessage: () => {},
+  clearGoingToMessage: () => {},
+  setSearch: () => {},
+  searchMessages: () => Promise.resolve({} as MessagePagination),
+  resetSearchMessages: () => {},
+  getMessageAuthor: () => new Contact({ identity: "" }),
+  getContactFromActiveConversation: () => new Contact({ identity: "" }),
+  deleteSelectedMessages: () => Promise.resolve(undefined),
+  setSelectionMode: () => {},
+  resetSelectionMode: () => {},
+  getBulkMessages: () => Promise.resolve([]),
+  openConversation: () => {},
+  sendCustomMessage: () => {},
+};
+
+export const TOTAL_SEARCH_MESSAGES_BY_PAGINATION = 20;
