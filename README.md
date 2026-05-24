@@ -46,6 +46,8 @@ Below is a basic example of how to use the `Chat` component:
 
 First need to use the ChatProvider to wrap the Chat component.
 
+This component uses the Twilio Conversations SDK under the hood. To connect and exchange messages, you must provide a valid Twilio **Access Token** (with the Conversations grant) via the required `onFetchToken` handler.
+
 ```jsx
 import { ChatProvider } from "@arieldrio/chat";
 
