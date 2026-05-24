@@ -25,3 +25,5 @@ dist-ssr
 
 .env
 .npmrc
+assets/*.mp4
+assets/*.mov

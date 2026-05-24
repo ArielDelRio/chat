@@ -1,5 +1,16 @@
 # Chat Component
 
+## Preview
+
+These previews are recorded from a demo host app; UI labels shown belong to that demo environment.
+
+<details open>
+  <summary><strong>Chat preview</strong></summary>
+  <p>
+    <img src="assets/preview-chat.gif" width="900" style="max-width: 100%; height: auto;" alt="Chat preview" />
+  </p>
+</details>
+
 The `Chat` component enables users to exchange messages in real-time. It serves as a straightforward yet essential element for any application needing a chat functionality. The component supports message sending, receiving, and displaying in a conversational format. Key features include user authentication, message timestamps, and typing indicators. It is easily customizable to match the look and feel of your application.
 
 ## Features
